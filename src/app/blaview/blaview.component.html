@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th class="sortable both" (click)="this.onHeaderClicked('name')">Name</th>
+      <th class="sortable asc" (click)="this.onHeaderClicked('extraSearchFields')">Extra search fields</th>
+      <th>Rating</th>
+      <th class="sortable desc" (click)="this.onHeaderClicked('comments')">Comments</th>
+    </tr>
+  </thead> 
+  <tbody>
+    @for (player of this.players$ | async; track $index) {
+    <tr>
+      <td>{{player.id}}</td>
+      <td>{{player.name}}</td>
+      <td>{{player.extraSearchFields}}</td>
+      <td>{{player.rating}}</td>
+      <td>{{player.comments}}</td>
+    </tr>
+    }
+
+</table>

@@ -1,0 +1,21 @@
+th.sortable {
+  cursor: pointer;
+}
+
+th.both {
+  background-image: url('./../../assets/images/both.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  
+}
+
+th.asc {
+  background-image: url('./../../assets/images/asc.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+th.desc {
+  background-image: url('./../../assets/images/desc.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}

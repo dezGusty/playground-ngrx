@@ -1,0 +1,13 @@
+<p>header works!</p>
+
+<button (click)="onTrigger1Clicked();">trigger 1</button>
+<button (click)="onTrigger2Clicked();">trigger 2</button>
+
+@if (this.evenMoreUserData$ | async; as evenMoreUserData) {
+<p>even more user data is available</p>
+{{ evenMoreUserData.token }}
+} @else {
+<p>not much data</p>
+}
+
+<br>
