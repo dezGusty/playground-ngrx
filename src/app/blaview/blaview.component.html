@@ -1,13 +1,18 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th class="sortable both" (click)="this.onHeaderClicked('name')">Name</th>
-      <th class="sortable asc" (click)="this.onHeaderClicked('extraSearchFields')">Extra search fields</th>
-      <th>Rating</th>
-      <th class="sortable desc" (click)="this.onHeaderClicked('comments')">Comments</th>
+      <th mapfield="id" (click)="this.onHeaderClicked('id', $event)" [ngClass]="getCSSClassForTableHeader('id')">Id</th>
+      <th mapfield="name" (click)="this.onHeaderClicked('name', $event)" [ngClass]="getCSSClassForTableHeader('name')">
+        Name</th>
+      <th mapfield="extraSearchFields" (click)="this.onHeaderClicked('extraSearchFields', $event)"
+        [ngClass]="getCSSClassForTableHeader('extraSearchFields')">Extra search
+        fields</th>
+      <th mapfield="rating" (click)="this.onHeaderClicked('rating', $event)"
+        [ngClass]="getCSSClassForTableHeader('rating')">Rating</th>
+      <th mapfield="comments" (click)="this.onHeaderClicked('comments', $event)"
+        [ngClass]="getCSSForTHAsync('comments', this.changeSortCriteria$ | async)">Comments</th>
     </tr>
-  </thead> 
+  </thead>
   <tbody>
     @for (player of this.players$ | async; track $index) {
     <tr>
@@ -20,3 +25,4 @@
     }
 
 </table>
+<code></code>
